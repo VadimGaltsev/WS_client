@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+	
+	<ImageView
+		android:id="@+id/image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="@+id/scrollView2"
+		app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<ScrollView
+		android:id="@+id/scrollView2"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@+id/hello"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:id="@+id/chatBox"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+	</ScrollView>
+	
+	<Button
+		android:id="@+id/hello"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="4dp"
+		android:text="Hello"
+		app:layout_constraintEnd_toStartOf="@+id/ifunny"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+		app:layout_constraintBottom_toTopOf="@+id/open" />
+	
+	<Button
+		android:id="@+id/ifunny"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="4dp"
+		android:text="ifunny"
+		app:layout_constraintStart_toEndOf="@+id/hello"
+		app:layout_constraintEnd_toStartOf="@+id/podlodka"
+		app:layout_constraintTop_toTopOf="@+id/hello"
+		app:layout_constraintBottom_toTopOf="@+id/open" />
+	
+	<Button
+		android:id="@+id/podlodka"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="4dp"
+		android:text="podlodka"
+		app:layout_constraintStart_toEndOf="@+id/ifunny"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/ifunny"
+		app:layout_constraintBottom_toTopOf="@+id/open" />
+	
+	<Button
+		android:id="@+id/open"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="open me"
+		android:layout_marginHorizontal="4dp"
+		app:layout_constraintBottom_toBottomOf="@+id/close"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/ifunny" />
+	
+	<Button
+		android:id="@+id/close"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="close me"
+		android:layout_marginHorizontal="4dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/open" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
